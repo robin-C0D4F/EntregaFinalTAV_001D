@@ -1,0 +1,21 @@
+.background {
+    --background:
+    url("../../assets/img/coffee_back.png") no-repeat center center / cover;
+    background: var(--background);
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;     
+}
+
+.splash-animation{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+
+}

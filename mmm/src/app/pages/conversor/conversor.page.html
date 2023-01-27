@@ -1,0 +1,45 @@
+<app-header [pageTitle]="pageTitle" [pageIcon]="pageIcon"></app-header>
+
+<ion-content>
+  <div class="contents">
+    <ion-row>
+      <ion-input type="number" class="value-input" [(ngModel)]="valorIni" placeholder="from" (keyup)="calculoIni()"></ion-input>
+    </ion-row>
+
+    <ion-row>
+      <ion-input type="number" class="value-input" [(ngModel)]="valorFin" placeholder="to" (keyup)="calculoFin() "></ion-input>
+    </ion-row>
+  </div>
+
+  <ion-row>
+    <ion-col class="selectors">
+      <select class="select-list" [(ngModel)]="nomIni" (change)="getListadoValores()">
+        <option *ngFor="let cod of codigo" selected value="{{cod}}">{{cod}}</option>
+      </select>
+    </ion-col>
+
+    <ion-col>
+      <select class="select-list" [(ngModel)]="nomFin" (change)="getListadoValores()">
+        <option *ngFor="let cod of codigo" value="{{cod}}">{{cod}}</option>
+      </select>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-card class="card-view">
+      <ion-card-header class="card-header">
+        <p>{{resultRate}}</p>
+      </ion-card-header>
+      <ion-card-content class="card-contents">
+        <ion-row>
+          <p>{{nombre.get(nomIni)}}</p>
+        </ion-row>
+        <ion-row>
+          <p>{{nombre.get(nomFin)}}</p>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+
+
+</ion-content>

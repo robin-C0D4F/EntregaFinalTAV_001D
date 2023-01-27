@@ -1,0 +1,19 @@
+<app-header [pageTitle]="pageTitle" [pageIcon]="pageIcon"></app-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="danger">Página no encontrada...</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Esta sección no existe, presione la flecha posterior para volver a Home
+    </ion-card-content>
+
+    <ion-item class="ion-activated" [routerLink]="['/']" color="danger">
+      <ion-icon name="arrow-undo-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "tavam2023"
+  },
+  "targets": {
+    "tavam2023": {
+      "hosting": {
+        "app": [
+          "tavam2023"
+        ]
+      }
+    }
+  }
+}

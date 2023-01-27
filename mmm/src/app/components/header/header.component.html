@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">{{pageTitle}}</ion-title>
+    <ion-avatar slot="end" *ngIf="pageIcon; else noAvatar">
+      <img src="{{pageIcon}}" alt="Image">      
+    </ion-avatar>
+    <ng-template #noAvatar>
+      <ion-avatar slot="end">
+        <img src="../../../assets/img/no-image.svg" alt="Not found">
+      </ion-avatar>        
+    </ng-template>
+  </ion-toolbar>
+</ion-header>

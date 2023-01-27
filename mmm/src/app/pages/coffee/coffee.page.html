@@ -1,0 +1,22 @@
+<app-header [pageTitle]="pageTitle" [pageIcon]="pageIcon"></app-header>
+<ion-content>
+
+  <ion-list lines="none" *ngIf="coffeeList; NoListed">
+    <ion-item *ngFor="let coffee of coffeeList">
+      <ion-avatar slot="start">
+        <img [src]="coffee.image" alt="{{coffee.name}}">
+      </ion-avatar>
+      <ion-label>
+        <h3>{{coffee.title}}</h3>       
+      </ion-label>
+      <ion-icon name="chevron-forward-outline" (click)="goToDetalleCoffee(coffee)"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #NoListed>
+    <h1>Are you trying to create a new preparation? We can't find such drink!</h1>
+  </ng-template>
+
+  
+
+</ion-content>

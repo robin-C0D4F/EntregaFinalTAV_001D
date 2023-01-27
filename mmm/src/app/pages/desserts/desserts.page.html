@@ -1,0 +1,22 @@
+<app-header [pageTitle]="pageTitle" [pageIcon]="pageIcon"></app-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let dessert of desserts" (click)="openDessert(dessert)">
+      <ion-avatar slot="start">
+        <ion-icon name="ice-cream-outline"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        {{dessert.nombre}}
+      </ion-label>
+    </ion-item>  
+  </ion-list>
+
+  <ion-fab horizontal="end" vertical="bottom">
+    <ion-fab-button color="primary" (click)="addDessert()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
